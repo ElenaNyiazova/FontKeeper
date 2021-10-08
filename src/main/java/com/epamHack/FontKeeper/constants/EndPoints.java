@@ -60,7 +60,7 @@ public interface EndPoints {
      * Actions
      */
 
-    String SUCCESS = "/success ";//сщщбщение об удачном действии: регистрации, сохранении шрифра и т.д
+    String SUCCESS = "/success ";//сообщение об удачном действии: регистрации, сохранении шрифра и т.д
 
     String WARNING = "/warning";//сообщение об ошибке
 
