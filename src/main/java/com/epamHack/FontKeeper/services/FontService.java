@@ -3,7 +3,6 @@ package com.epamHack.FontKeeper.services;
 import com.epamHack.FontKeeper.model.db.Font;
 import com.epamHack.FontKeeper.model.rest.FontDTO;
 import com.epamHack.FontKeeper.repositories.FontRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,8 +10,11 @@ import java.util.Set;
 @Service
 public class FontService {
 
-    @Autowired
     private FontRepository fontRepository;
+
+    public FontService(FontRepository fontRepository) {
+        this.fontRepository = fontRepository;
+    }
 
     public FontDTO create(Font font) {
 
