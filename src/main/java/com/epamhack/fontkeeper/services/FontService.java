@@ -6,8 +6,8 @@ import com.epamhack.fontkeeper.repositories.FontRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class FontService {
@@ -19,18 +19,25 @@ public class FontService {
         this.fontRepository = fontRepository;
     }
 
-    public FontDTO create(Font font) {
+    public FontDTO save(Font font) {
 
-        //TODO: 09.10.2021 implement method
-        return null;
+        return new FontDTO(fontRepository.save(font));
+    }
 
+    public FontDTO findById(Long id) {
+
+        return new FontDTO(fontRepository.findById(id).get());
     }
 
     public Set<FontDTO> findAll() {
 
-        // TODO: 09.10.2021 implement method
-        fontRepository.findAll();
-        return Collections.emptySet();
+        Set<Font> fontSet = (HashSet) fontRepository.findAll();
+        return fontSet.stream()
+                .map(FontDTO::new)
+                .collect(Collectors.toSet());
     }
 
+    public void delete(Font font) {
+        fontRepository.delete(font);
+    }
 }
