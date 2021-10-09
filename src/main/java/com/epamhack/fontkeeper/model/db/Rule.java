@@ -1,23 +1,35 @@
 package com.epamhack.fontkeeper.model.db;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
+@Entity
+@Table(name = "rules")
+@NoArgsConstructor
 public class Rule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(nullable = false)
     private String ruleName;
+
+    @Column(nullable = false)
     private String ruleInfo;
-    private long ruleCategory;
+
+    @ManyToOne
+    @JoinColumn(name = "rule_category_id", nullable = false)
+    private RuleCategory ruleCategory;
+
     private boolean rank;
+
     private int visible;
-    private int letters;
+
+    @ManyToOne
+    @JoinColumn(name = "letter_id", nullable = false)
+    private Letter letter;
 }
