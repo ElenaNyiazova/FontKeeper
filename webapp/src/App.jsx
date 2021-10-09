@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import MainScreen from './components/main-screen/main-screen';
 import ProfileScreen from './components/profile-screen/profile-screen';
+import PageNotFound from './components/page-not-found/page-not-found';
 import './App.scss';
 
 const App = () => {
@@ -14,9 +15,7 @@ const App = () => {
         <ProfileScreen />
       </Route>
       <Route>
-        <>
-          <h1>Page not found =(</h1>
-        </>
+        <PageNotFound />
       </Route>
     </Switch>
   );

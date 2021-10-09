@@ -3,7 +3,13 @@ import {ABC} from '../../constants/constants';
 import PropTypes from 'prop-types';
 
 const ContentView = props => {
-    const {fontName} = props;
+    const {fontName, letter, setLetter} = props;
+
+    const onLetterClick = (evt) => {
+        const selectedLetter = evt.target.id;
+
+        setLetter(selectedLetter);
+    };
 
     return (
         <div className="content">
@@ -17,8 +23,8 @@ const ContentView = props => {
                         fontSize: "30px",
                         lineHeight: '1.5'
                     }} className="content_abc-item" key={item[0]}>
-                        <button className="content_abc-letter" onClick={() => console.log('oops!')} id={item[0]}>{item[0]}</button>
-                        <button className="content_abc-letter" onClick={() => console.log('oops!')} id={item[1]}>{item[1]}</button></li>)}
+                        <button className="content_abc-letter" onClick={onLetterClick} id={item[0]}>{item[0]}</button>
+                        <button className="content_abc-letter" onClick={onLetterClick} id={item[1]}>{item[1]}</button></li>)}
                 </ul>
                 </div>
                 <div className="content_rules">
@@ -26,7 +32,7 @@ const ContentView = props => {
                             fontSize: '6rem',
                             color: 'white',
                             marginRight: '20px'
-                        }}>A</p>
+                        }}>{letter}</p>
                         <p style={{
                             fontSize: '4rem',
                             color: 'white',
@@ -39,7 +45,6 @@ const ContentView = props => {
                         </select>
                 </div>
             </section>
-            <section className="content_bottom"></section>
        </div>
       
     );
@@ -47,6 +52,8 @@ const ContentView = props => {
 
 ContentView.propTypes = {
     fontName: PropTypes.string,
+    letter:  PropTypes.string,
+    setLetter: PropTypes.func
 };
 
 export default ContentView;
