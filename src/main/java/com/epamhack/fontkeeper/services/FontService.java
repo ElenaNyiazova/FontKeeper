@@ -19,19 +19,17 @@ public class FontService {
         this.fontRepository = fontRepository;
     }
 
-    public FontDTO save(Font font) {
-
-        return new FontDTO(fontRepository.save(font));
-    }
-
     public FontDTO findById(Long id) {
 
-        return new FontDTO(fontRepository.findById(id).get());
+        return new FontDTO(fontRepository.findById(id).orElseThrow(RuntimeException::new));
     }
 
     public Set<FontDTO> findAll() {
 
-        Set<Font> fontSet = (HashSet) fontRepository.findAll();
+        Set<Font> fontSet = new HashSet<>();
+        for (Font font : fontRepository.findAll()) {
+            fontSet.add(font);
+        }
         return fontSet.stream()
                 .map(FontDTO::new)
                 .collect(Collectors.toSet());
