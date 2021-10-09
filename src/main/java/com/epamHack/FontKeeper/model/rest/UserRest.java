@@ -1,5 +1,4 @@
 package com.epamHack.FontKeeper.model.rest;
-//Этот класс принимает запросы от контролера и отправляет данные в сервис
 
 import com.epamHack.FontKeeper.enums.Role;
 import lombok.AllArgsConstructor;
