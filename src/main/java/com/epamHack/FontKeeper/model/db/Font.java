@@ -1,5 +1,6 @@
 package com.epamHack.FontKeeper.model.db;
 
+import com.epamHack.FontKeeper.enums.License;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,7 +23,7 @@ public class Font {
     private boolean monospace;
     private boolean cyrillic;
     private boolean latin;
-    private String license;
+    private License license;
     private String sourceLink;
     private boolean addToLib;
     private int ownerID;
