@@ -40,5 +40,5 @@ public class Font {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private com.epamhack.fontkeeper.model.db.User ownerID;
+    private User ownerID;
 }
