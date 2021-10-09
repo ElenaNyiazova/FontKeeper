@@ -8,7 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Data
@@ -16,9 +15,6 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @Builder
 public class FontDTO {
-
-    @Id
-    private long id;
 
     @NotNull
     private String fontName;
@@ -32,11 +28,10 @@ public class FontDTO {
     private String license;
     private String sourceLink;
     private boolean addToLib;
-    private User ownerID;
+    private User owner;
 
     public FontDTO(Font font) {
 
-        this.id = font.getId();
         this.fontName = font.getFontName();
         this.serifCategory = font.isSerifCategory();
         this.sansSerifCategory = font.isSansSerifCategory();
@@ -48,7 +43,8 @@ public class FontDTO {
         this.license = font.getLicense();
         this.sourceLink = font.getSourceLink();
         this.addToLib = font.isAddToLib();
-        this.ownerID = font.getOwnerID();
+        this.owner = font.getOwner();
+
     }
 
 }

@@ -7,17 +7,14 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "letters")
+@Table(name = "rule_categories")
 @NoArgsConstructor
-public class Letter {
+public class RuleCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
-    private String alphabet;
+    private String categoryName;
 }

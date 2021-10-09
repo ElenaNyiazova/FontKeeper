@@ -40,5 +40,5 @@ public class Font {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User ownerID;
+    private User owner;
 }
