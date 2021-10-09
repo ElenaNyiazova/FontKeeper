@@ -1,30 +1,44 @@
 package com.epamHack.FontKeeper.model.db;
 
-import com.epamHack.FontKeeper.enums.License;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
+@Entity
+@Table(name = "fonts")
+@NoArgsConstructor
 public class Font {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
+
+    @Column(nullable = false)
     private String fontName;
+
     private boolean serifCategory;
+
     private boolean sansSerifCategory;
+
     private boolean handwritingCategory;
+
     private boolean display;
+
     private boolean monospace;
+
     private boolean cyrillic;
+
     private boolean latin;
-    private License license;
+
+    private String license;
+
+    @Column(nullable = false)
     private String sourceLink;
+
     private boolean addToLib;
-    private int ownerID;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User ownerID;
 }
