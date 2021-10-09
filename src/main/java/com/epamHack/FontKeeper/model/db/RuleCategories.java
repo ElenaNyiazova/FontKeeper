@@ -1,4 +1,4 @@
-package com.epamhack.fontkeeper.model.db;
+package com.epamHack.FontKeeper.model.db;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,11 +9,10 @@ import javax.persistence.Id;
 
 @Getter
 @Setter
-public class Letter {
+public class RuleCategories {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
-    private String alphabet;
+    private String categoryName;
 }

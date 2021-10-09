@@ -1,4 +1,4 @@
-package com.epamhack.fontkeeper.constants;
+package com.epamHack.FontKeeper.constants;
 
 public interface EndPoints {
 

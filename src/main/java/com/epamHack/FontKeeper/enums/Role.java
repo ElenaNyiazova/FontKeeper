@@ -1,4 +1,4 @@
-package com.epamhack.fontkeeper.enums;
+package com.epamHack.FontKeeper.enums;
 
 public enum Role {
     USER_ROLE("user_role"),

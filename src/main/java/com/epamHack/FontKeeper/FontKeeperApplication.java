@@ -1,4 +1,4 @@
-package com.epamhack.fontkeeper;
+package com.epamHack.FontKeeper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
