@@ -2,15 +2,13 @@ package com.epamHack.FontKeeper.model.rest;
 
 
 import com.epamHack.FontKeeper.model.db.Font;
-import com.sun.istack.internal.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Id;
-
-public class FontDTO{
+import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
