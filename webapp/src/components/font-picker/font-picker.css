@@ -1,0 +1,34 @@
+.example-font-picker {
+    font-size: 14px;
+    min-height: 200px;
+}
+
+.example-font-picker .font-list {
+    min-height: 200px;
+    background-color: white;
+}
+
+.example-font-picker #font-picker {
+    position: static;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.example-font-picker #font-picker ul {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    box-shadow: none;
+    background: white;
+}
+
+.example-font-picker #font-picker .dropdown-button {
+    display: none;
+}
+
+.example-font-picker .dropdown-icon {
+    display: none;
+}

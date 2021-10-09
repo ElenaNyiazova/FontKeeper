@@ -1,0 +1,36 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "test": "npm run eslint",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "babel-loader": "8.2.2",
+    "css-loader": "5.0.2",
+    "eslint": "7.32.0",
+    "eslint-plugin-react": "7.26.1",
+    "style-loader": "2.0.0",
+    "webpack": "4.46.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.2"
+  },
+  "dependencies": {
+    "font-picker-react": "^3.5.2",
+    "history": "4.10.1",
+    "prop-types": "^15.7.2",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-redux": "7.2.5",
+    "react-router-dom": "5.2.1"
+  }
+}

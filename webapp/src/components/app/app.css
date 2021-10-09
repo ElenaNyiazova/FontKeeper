@@ -1,0 +1,191 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, #root {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.main-header,
+.main-footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    background-color: #971D29;
+}
+
+.main-title {
+    font-family: "PT sans", sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.2em;
+}
+
+.main-title span {
+    color: red;
+}
+
+.main-link {
+    color: white;
+}
+
+.main-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: #F0F1F6;
+}
+
+.main-content-top,
+.main-content-bottom {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-content-top {
+    background-color: #971D29;
+}
+
+.content-container {
+    /* margin: 0; */
+    /* padding: 0; */
+    /* color: white; */
+    /* background-color: #971D29; */
+}
+
+.content {
+    /* outline: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    min-width: 500px;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.content_abc-list {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_abc-item {
+    margin: 0 5px;
+    padding: 0.2em;
+}
+
+.content_abc-letter {
+    color: white;
+    font-size: 30px;
+    line-height: 1.5;
+    border: 0 none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.content_abc-letter:hover,
+.content_abc-letter:focus {
+    color: red;
+}
+
+.content_abc-letter:active {
+    color: red;
+    opacity: 0.6;
+}
+
+.content_about-title {
+    font-family: "PT sans", sans-serif;
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.content_about-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.content_rules {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content_rules .letter {
+
+}
+
+.content_rules-title {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_rules-cards {
+    max-width: 65%;
+}
+
+.sidebar {
+    width: 427px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.font-selector {
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
