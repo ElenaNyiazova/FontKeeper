@@ -1,4 +1,4 @@
-package com.epamhack.fontkeeper.model.db;
+package com.epamhack.fontKeeper.model.db;
 
 import lombok.*;
 
@@ -40,5 +40,5 @@ public class Font {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User ownerID;
+    private com.epamhack.fontkeeper.model.db.User ownerID;
 }
