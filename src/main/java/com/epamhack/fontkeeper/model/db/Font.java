@@ -1,4 +1,4 @@
-package com.epamhack.fontKeeper.model.db;
+package com.epamhack.fontkeeper.model.db;
 
 import lombok.*;
 
