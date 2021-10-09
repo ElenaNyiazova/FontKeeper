@@ -1,0 +1,21 @@
+@import './constants/colors.scss';
+@import './common/normalize.scss';
+@import './common/link.scss';
+@import './common/button.scss';
+
+* {
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
+
+    &:after, &:before {
+        box-sizing: border-box;
+    }
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+body {
+    
+}
