@@ -1,0 +1,19 @@
+@import '../../constants/colors.scss';
+
+
+.Profile {
+    flex: 1;
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .mainContent {
+        display: flex;
+        gap: 30px;
+    }
+}

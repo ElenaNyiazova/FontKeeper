@@ -1,11 +1,16 @@
 import './App.scss';
-import Checkbox from './common/Checkbox/Checkbox';
-import Switch from './common/Switch/Switch';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
     <div className="App">
-     
+      <Header />
+
+      <Profile />
+
+      <Footer />
     </div>
   );
 }
