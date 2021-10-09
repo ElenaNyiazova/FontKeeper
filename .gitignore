@@ -37,5 +37,4 @@ out/
 .vscode/
 
 ### Webapp ###
-/public
 /node_modules

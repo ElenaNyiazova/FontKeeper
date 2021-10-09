@@ -1,19 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import ContentView  from '../content-view/content-view';
 import FontSelector from '../font-selector/font-selector';
+import Rules from '../rules/rules';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
 const MainScreen = () => {
     return (
         <div className='container'>
-        <header className='main-header'>
-            <h1 className='main-title'><span className="main-title_bg">Б</span>уква к <span className="main-title_sm">б</span>укве</h1>
-            <p className='user-nav'>
-                <Link className='main-link' to='/'>
-                  Вход на сайт
-                </Link>
-            </p>
-        </header>
+        <Header />
         <main className='main-content'>
             <div className='main-content-top'>
                 <ContentView fontName="Roboto" />
@@ -22,15 +17,10 @@ const MainScreen = () => {
                 <FontSelector />
             </div>
             <div className='main-content-bottom'>
-            <p>Hello!</p>
+                <Rules />
             </div>
         </main>
-        <footer className='main-footer'>
-            <h2 className='main-title'><span className="main-title_bg">Б</span>уква к <span className="main-title_sm">б</span>укве</h2>
-            <Link className='main-link' to='/'>
-                Написать разработчикам
-            </Link>
-        </footer>
+        <Footer />
         </div>
     );
 };
