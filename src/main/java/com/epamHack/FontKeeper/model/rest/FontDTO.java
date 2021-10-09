@@ -1,19 +1,23 @@
-package com.epamHack.FontKeeper.model.db;
+package com.epamHack.FontKeeper.model.rest;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.sun.istack.internal.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Getter
-@Setter
-public class Font {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class FontDTO {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotNull
     private String fontName;
     private boolean serifCategory;
     private boolean sansSerifCategory;
