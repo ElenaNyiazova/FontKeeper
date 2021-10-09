@@ -1,4 +1,5 @@
 package com.epamHack.FontKeeper.model.db;
+//Этот класс принимает запросы от сервис слоя обрабатывает, возвращвет ответ и работает с базой данных
 
 import com.epamHack.FontKeeper.enums.Role;
 import lombok.Getter;

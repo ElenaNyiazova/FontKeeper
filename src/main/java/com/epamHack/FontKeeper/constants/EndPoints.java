@@ -21,6 +21,14 @@ public interface EndPoints {
     String PASSWORD = "/password";
 
     /**
+     * API calls:
+     */
+
+    String API_PREFIX = "/api/v1";
+
+    String API_FONTS = API_PREFIX + "/fonts";
+
+    /**
      * User management
      */
 
