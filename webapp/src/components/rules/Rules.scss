@@ -2,7 +2,6 @@
 
 .content_rules-cards {
     width: 70%;
-    max-width: 70%;
     min-width: 500px;
     min-height: 200px;
     margin: 0;
@@ -56,8 +55,8 @@
 
 .masonry-layout {
     column-count: 2;
-    column-gap: 0;
-    margin-bottom: 20px;
+    column-gap: 30px;
+    margin-top: 20px;
 
     @media screen and (max-width: 800px) {
         column-count: 1;
@@ -65,9 +64,8 @@
 }
 
 .masonry-layout__panel {  
-  width: 85%;
-  margin: 20px;
   margin-top: 0;
+  margin-bottom: 30px;
   break-inside: avoid;
 }
 

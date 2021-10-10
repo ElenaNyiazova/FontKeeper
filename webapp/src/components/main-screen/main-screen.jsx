@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import ContentView  from '../content-view/content-view';
 import FontSelector from '../font-selector/font-selector';
 import Rules from '../rules/rules';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 
 const MainScreen = () => {
     const [letter, setLetter] = useState(null);
@@ -11,8 +9,6 @@ const MainScreen = () => {
     const [activeFontFamily, setActiveFontFamily] = useState("Open Sans");
     
     return (
-        <div className='container'>
-        <Header />
         <main className='main-content'>
             <div className='main-content-top'>
                 <ContentView 
@@ -23,15 +19,15 @@ const MainScreen = () => {
                     fontName={activeFontFamily}
                 />
             </div>
+
             <div className="sidebar">
                 <FontSelector activeFontFamily={activeFontFamily} setActiveFontFamily={setActiveFontFamily} />
             </div>
+            
             <div className='main-content-bottom'>
                 <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
             </div>
         </main>
-        <Footer />
-        </div>
     );
 };
 
