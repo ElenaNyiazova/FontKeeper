@@ -7,19 +7,27 @@ import Header from '../Header/Header';
 
 const MainScreen = () => {
     const [letter, setLetter] = useState(null);
-
+    const [fontstyle, setFontStyle] = useState('bold');
+    const [activeFontFamily, setActiveFontFamily] = useState("Open Sans");
+    
     return (
         <div className='container'>
         <Header />
         <main className='main-content'>
             <div className='main-content-top'>
-                <ContentView letter={letter} setLetter={setLetter} fontName="Roboto" />
+                <ContentView 
+                    letter={letter} 
+                    setLetter={setLetter} 
+                    fontstyle={fontstyle}
+                    setFontStyle={setFontStyle}
+                    fontName={activeFontFamily}
+                />
             </div>
             <div className="sidebar">
-                <FontSelector />
+                <FontSelector activeFontFamily={activeFontFamily} setActiveFontFamily={setActiveFontFamily} />
             </div>
             <div className='main-content-bottom'>
-                <Rules />
+                <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
             </div>
         </main>
         <Footer />

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import FontPicker from "font-picker-react";
 import {API_KEY} from '../../constants/constants';
 import './font-picker.scss';
 
 const ExampleFontPicker = props => {
-  const [activeFontFamily, setActiveFontFamily] = useState("Open Sans");
+  const {activeFontFamily, setActiveFontFamily} = props;
 
   return (
     <div className="example-font-picker">
