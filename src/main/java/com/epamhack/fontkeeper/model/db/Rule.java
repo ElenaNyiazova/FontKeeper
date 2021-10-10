@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,7 +30,9 @@ public class Rule {
 
     private int visible;
 
-    @ManyToOne
-    @JoinColumn(name = "letter_id", nullable = false)
-    private Letter letter;
+    @ManyToMany
+    @JoinTable (name="letters_rules",
+            joinColumns=@JoinColumn (name="rule_id", nullable = false),
+            inverseJoinColumns=@JoinColumn(name="letter_id", nullable = false))
+    private List<Letter> letters;
 }
