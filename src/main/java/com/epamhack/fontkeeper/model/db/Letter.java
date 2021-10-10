@@ -20,4 +20,7 @@ public class Letter {
 
     @Column(nullable = false)
     private String alphabet;
+
+    @ManyToMany
+    private long ruleID;
 }
