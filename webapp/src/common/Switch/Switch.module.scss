@@ -1,0 +1,92 @@
+@import '../../constants/colors.scss';
+
+
+.label {
+    border-radius: 14px;
+    width: 28px;
+    height: 16px;
+    background-color: $white;
+    position: relative;    
+    cursor: pointer;
+    display: block;
+    transition: .3s;
+
+    .box {
+        border: 1px solid $text-light;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 14px;
+        transition: .3s;
+    }
+
+    .checkMark {
+        position: absolute;
+        left: 2px;
+        top: 1px;
+        width: 12px;
+        height: 12px;
+        background-color: $text-light;
+        border-radius: 50%;
+        transition: .3s;
+
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            background-color: transparent;
+            border-radius: 2px;
+            transition: .3s;    
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 0;
+        }
+
+        &:after {
+            left: 3.2px;
+            top: 5px;
+            width: 1px;
+            height: 4px;
+            transform: rotate(-45deg);
+        }
+
+        &:before {
+            left: 6.8px;
+            top: 3px;
+            width: 1px;
+            height: 7px;
+            transform: rotate(45deg);
+        }
+    }
+    
+    .input {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;    
+
+        &:checked {
+            &+.box {
+                background-color: $text-light;
+
+                .checkMark {
+                    left: calc(100% - 14px);
+                    background-color: $white;
+    
+                    &:after, &:before {
+                        background-color: $accent-active;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover, &:focus {
+        .box {
+            border-color: $accent-active;
+        }
+
+        .checkMark {
+            background-color: $accent-active;
+        }
+    }
+}

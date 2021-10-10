@@ -1,0 +1,18 @@
+@import '../../constants/colors.scss';
+
+.footer {
+    background-color: $bg;
+    color: $white;
+    
+    .container {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .links {
+        display: flex;
+        gap: 20px;
+    }
+}
