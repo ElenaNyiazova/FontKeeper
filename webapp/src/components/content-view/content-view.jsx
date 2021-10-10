@@ -37,10 +37,10 @@ const ContentView = props => {
                 </ul>
                 </div>
                 <div className="content_rules">
-                        <p style={{
+                        {letter && <p style={{
                             fontWeight: `${fontstyle === 'bold' ? 'bold': 'normal'}`,
                             fontStyle: `${fontstyle}`
-                        }} className="content_rules-letter apply-font">{letter}</p>
+                        }} className="content_rules-letter apply-font">{letter}</p>}
                         <p className="content_rules-font-name apply-font">{fontName}</p>
                         <select className="content_rules-select" defaultValue="bold" onChange={onStyleSelectChange}>
                             <option value="bold">Bold</option>
