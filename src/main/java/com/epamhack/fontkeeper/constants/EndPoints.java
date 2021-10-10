@@ -12,13 +12,13 @@ public interface EndPoints {
 
     String ID = "/{id}";
 
-    String SWAGGER_URL = "/swagger-ui/";
-
-    String SWAGGER_URL_REDIRECT = "/swagger";
-
-    String SWAGGER_RESOURCES = "/swagger-resources/**";
-
-    String WEBJARS_SPRINGFOX_SWAGGER = "/webjars/springfox-swagger-ui/**";
+//    String SWAGGER_URL = "/swagger-ui/";
+//
+//    String SWAGGER_URL_REDIRECT = "/swagger";
+//
+//    String SWAGGER_RESOURCES = "/swagger-resources/**";
+//
+//    String WEBJARS_SPRINGFOX_SWAGGER = "/webjars/springfox-swagger-ui/**";
 
     String SWAGGER_DOCUMENTATION = "/v2/api-docs";
 
