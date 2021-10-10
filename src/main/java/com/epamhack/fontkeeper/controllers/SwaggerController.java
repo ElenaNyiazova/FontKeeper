@@ -1,4 +1,4 @@
-package com.epamhack.fontKeeper.controllers;
+package com.epamhack.fontkeeper.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
