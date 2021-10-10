@@ -31,7 +31,7 @@ const ContentView = props => {
                         <p style={{
                             fontSize: '6rem',
                             color: 'white',
-                            marginRight: '20px'
+                            margin: '0 20px'
                         }}>{letter}</p>
                         <p style={{
                             fontSize: '4rem',
