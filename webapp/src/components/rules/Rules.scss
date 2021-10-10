@@ -11,9 +11,10 @@
 }
 
 .content_rules-link {
+    display: block;
     margin-left: 20px;
     font-size: 14px;
-    padding: 0.2em 0;
+    padding: 1em 0;
 
     &:hover,
     &:focus {

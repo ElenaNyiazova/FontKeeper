@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExampleFontPicker from '../font-picker/font-picker';
 import {FotnTypes, FontAbcs, Sources, THROTTLE_TIMEOUT} from '../../constants/constants';
 import {throttle} from '../../utils';
 
@@ -57,6 +58,7 @@ const FontSelector = () => {
           </p>
           <p className="form-item">
               <input className="search-input" type="search" placeholder="Поиск по названию" onChange={searchFont} />
+              <ExampleFontPicker />
           </p>
           <p className="form-item">
             <button className="upload-btn" type="button" name="upload">Загрузить свой шрифт</button>
