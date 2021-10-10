@@ -14,8 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 public class RuleDTO {
 
-    RuleService ruleService;
-
     private long id;
     private String ruleName;
     private String ruleInfo;
@@ -23,7 +21,7 @@ public class RuleDTO {
     private int rank;
     private boolean visible;
     private int letters;
-    private List<LetterDTO> allLettersWithRule;
+    //private List<LetterDTO> allLettersWithRule;
 
 
 }

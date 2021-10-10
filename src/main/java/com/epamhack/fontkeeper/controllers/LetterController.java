@@ -1,5 +1,7 @@
 package com.epamhack.fontkeeper.controllers;
 
+import com.epamhack.fontkeeper.model.rest.LetterDTO;
+import com.epamhack.fontkeeper.model.rest.LetterResponse;
 import com.epamhack.fontkeeper.services.LetterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,10 +20,14 @@ public class LetterController {
         this.letterService = letterService;
     }
 // TODO дописать метод как будут сделаны сервис и прочее
-//    @GetMapping(API_LETTERS_SEARCH_BY_ID)
-//    public LetterResponse getLetterByID(@PathVariable("id") Long id) {
-//
-//     //   letterService.findById(id);
-//        return null;
-//    }
+    @GetMapping(API_LETTERS_SEARCH_BY_ID)
+    public LetterResponse getLetterByID(@PathVariable("id") Long id) {
+
+        //Должен ли id буквы приходить с фронта или мы берем его из базы?
+        //всего 66 букв ?+ другие символы
+
+       // letterService.findById(id);
+
+        return  null;
+    }
 }

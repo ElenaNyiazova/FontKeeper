@@ -1,5 +1,6 @@
 package com.epamhack.fontkeeper.services;
 
+import com.epamhack.fontkeeper.model.db.Letter;
 import com.epamhack.fontkeeper.model.rest.LetterDTO;
 import com.epamhack.fontkeeper.model.rest.RuleDTO;
 import com.epamhack.fontkeeper.repositories.LetterRepository;
@@ -20,16 +21,24 @@ public class LetterService {
         this.ruleService = ruleService;
     }
 
-    //получаем букву возвращаем список ее правил
-    List<RuleDTO> getRules(long letterID) {
+    Letter findLetterById (long letterDtoId){
+        return letterRepository.findById(letterDtoId).orElse(new Letter());
+    }
 
-        letterRepository.findById(letterID);
+
+    //получаем  id буквы, возвращаем список ее правил
+    List<RuleDTO> findRulesByLetter(long letterID) {
+        ArrayList<RuleDTO> listOfRules = new ArrayList<>();
+        //найти букву по id
 
 
-        ArrayList<RuleDTO> l = ruleService.
+        //Если буква не найдена new LetterNotFoundException()
 
-                letterRepository.findById(letterID).get().
+        //выбрать все правила для этой буквы
 
+        listOfRules.add(letter,
+        ruleService.
+        return listOfRules;
     }
 
 }

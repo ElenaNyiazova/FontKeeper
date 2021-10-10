@@ -12,8 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LetterDTO {
 
-    LetterService letterService;
-
     private long id;
     private String letterName;
     private String alphabet;
