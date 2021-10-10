@@ -1,0 +1,22 @@
+@import '../../constants/colors.scss';
+
+.input {
+    height: 40px;
+    padding: 8px 40px 8px 16px;
+    border: 1px solid $text-dark;
+    border-radius: 2px;
+}
+
+.searchBar {
+    position: relative;
+
+    .searchIcon {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: url("../../images/searchIcon.png") no-repeat center / cover;
+        right: 16px;
+        top: 12px;
+        z-index: 1;
+    }
+}

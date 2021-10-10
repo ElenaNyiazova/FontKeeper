@@ -44,20 +44,6 @@
                 display: flex;
                 align-items: center;
                 gap: 16px;
-
-                .editBtn, .deleteBtn {
-                    border: none;
-                    width: 24px;
-                    height: 24px;
-                }
-
-                .editBtn {
-                    background: url("../../../images/editBtn.png") no-repeat center;
-                }
-
-                .deleteBtn {
-                    background: url("../../../images/deleteBtn.png") no-repeat center;
-                }
             }
         }
     }
