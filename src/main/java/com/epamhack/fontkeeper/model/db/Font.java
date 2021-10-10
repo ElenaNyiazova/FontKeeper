@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "fonts")
 @NoArgsConstructor
+@AllArgsConstructor
 public class Font {
 
     @Id
