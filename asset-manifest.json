@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/FontKeeper/static/css/main.e4d8dea5.chunk.css",
-    "main.js": "/FontKeeper/static/js/main.3308c8cd.chunk.js",
-    "main.js.map": "/FontKeeper/static/js/main.3308c8cd.chunk.js.map",
-    "runtime-main.js": "/FontKeeper/static/js/runtime-main.f78ac0c2.js",
-    "runtime-main.js.map": "/FontKeeper/static/js/runtime-main.f78ac0c2.js.map",
-    "static/js/2.61082580.chunk.js": "/FontKeeper/static/js/2.61082580.chunk.js",
-    "static/js/2.61082580.chunk.js.map": "/FontKeeper/static/js/2.61082580.chunk.js.map",
-    "static/js/3.80607d0a.chunk.js": "/FontKeeper/static/js/3.80607d0a.chunk.js",
-    "static/js/3.80607d0a.chunk.js.map": "/FontKeeper/static/js/3.80607d0a.chunk.js.map",
+    "main.css": "/FontKeeper/static/css/main.77ed316d.chunk.css",
+    "main.js": "/FontKeeper/static/js/main.a31324ea.chunk.js",
+    "main.js.map": "/FontKeeper/static/js/main.a31324ea.chunk.js.map",
+    "runtime-main.js": "/FontKeeper/static/js/runtime-main.fca4ebb0.js",
+    "runtime-main.js.map": "/FontKeeper/static/js/runtime-main.fca4ebb0.js.map",
+    "static/js/2.ffa3d385.chunk.js": "/FontKeeper/static/js/2.ffa3d385.chunk.js",
+    "static/js/2.ffa3d385.chunk.js.map": "/FontKeeper/static/js/2.ffa3d385.chunk.js.map",
+    "static/js/3.8bdb3c1c.chunk.js": "/FontKeeper/static/js/3.8bdb3c1c.chunk.js",
+    "static/js/3.8bdb3c1c.chunk.js.map": "/FontKeeper/static/js/3.8bdb3c1c.chunk.js.map",
     "index.html": "/FontKeeper/index.html",
-    "static/css/main.e4d8dea5.chunk.css.map": "/FontKeeper/static/css/main.e4d8dea5.chunk.css.map",
-    "static/js/2.61082580.chunk.js.LICENSE.txt": "/FontKeeper/static/js/2.61082580.chunk.js.LICENSE.txt",
+    "static/css/main.77ed316d.chunk.css.map": "/FontKeeper/static/css/main.77ed316d.chunk.css.map",
+    "static/js/2.ffa3d385.chunk.js.LICENSE.txt": "/FontKeeper/static/js/2.ffa3d385.chunk.js.LICENSE.txt",
     "static/media/mockFontImg.c1e0b8c9.png": "/FontKeeper/static/media/mockFontImg.c1e0b8c9.png",
     "static/media/not-fond.38612741.png": "/FontKeeper/static/media/not-fond.38612741.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f78ac0c2.js",
-    "static/js/2.61082580.chunk.js",
-    "static/css/main.e4d8dea5.chunk.css",
-    "static/js/main.3308c8cd.chunk.js"
+    "static/js/runtime-main.fca4ebb0.js",
+    "static/js/2.ffa3d385.chunk.js",
+    "static/css/main.77ed316d.chunk.css",
+    "static/js/main.a31324ea.chunk.js"
   ]
 }
