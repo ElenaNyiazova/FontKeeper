@@ -33,7 +33,7 @@ const Rules = props => {
         <ul className="masonry-layout">
             {mockRules.map((rule) => 
                 <li className="content_rules-cardItem masonry-layout__panel">
-                    <h3 className="content_rules-letters">{rule.letters}</h3>
+                    <h3 className="content_rules-letters apply-font">{rule.letters}</h3>
                     <p className="content_rules-text-sm">{rule.text}</p>
                 </li>
             )}

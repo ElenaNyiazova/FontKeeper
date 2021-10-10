@@ -50,7 +50,8 @@ body, #root {
     line-height: 1.5;
     font-weight: bold;
     margin: 0;
-    padding: 0.2em;
+    margin-left: 30px;
+    padding: 0.2em 0;
 
     .main-title_bg {
         color: $accent-light
@@ -77,7 +78,6 @@ body, #root {
 }
 
 .main-content {
-    position: relative;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -153,6 +153,13 @@ body, #root {
     flex-wrap: wrap;
 }
 
+.content_rules-letter {
+    color: $white;
+    font-size: 6rem;
+    margin: 0 20px;
+    padding: 0;
+}
+
 .content_rules-select {
     cursor: pointer;
     color: $accent-main;
@@ -164,11 +171,13 @@ body, #root {
 }
 
 .sidebar {
-    position: absolute;
-    top: 25px;
-    right: 40px;
+    position: fixed;
+    top: 50px;
+    right: 35px;
     margin: 0;
     padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);;
 }
 
 .font-selector {

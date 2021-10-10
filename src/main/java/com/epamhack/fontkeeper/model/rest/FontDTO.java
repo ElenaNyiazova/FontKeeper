@@ -44,7 +44,6 @@ public class FontDTO {
         this.sourceLink = font.getSourceLink();
         this.addToLib = font.isAddToLib();
         this.owner = font.getOwner();
-
     }
 
 }
