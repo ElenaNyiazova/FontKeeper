@@ -12,14 +12,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class RuleService {
-    private RuleRepository ruleRepository;
-    private LetterService letterService;
 
     @Autowired
-    public RuleService(RuleRepository ruleRepository, LetterService letterService) {
-        this.ruleRepository = ruleRepository;
-        this.letterService = letterService;
-    }
+    private RuleRepository ruleRepository;
+
+    @Autowired
+    private LetterService letterService;
 
 //найти правило по id, создать правило+, достать лист letters
 

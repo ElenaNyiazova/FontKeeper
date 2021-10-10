@@ -15,14 +15,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class LetterService {
-    private LetterRepository letterRepository;
-    private RuleService ruleService;
 
     @Autowired
-    public LetterService(LetterRepository letterRepository, RuleService ruleService) {
-        this.letterRepository = letterRepository;
-        this.ruleService = ruleService;
-    }
+    private LetterRepository letterRepository;
+
+    @Autowired
+    private RuleService ruleService;
 
     public Letter findLetterById (long letterDtoId){
         return letterRepository.findById(letterDtoId).orElseThrow(LetterNotFoundException::new);
