@@ -25,15 +25,17 @@ const ContentView = props => {
                 <h2 className="visually-hidden">Heading</h2>
                 <div className="content-container">
                 <ul className="content_abc-list">
-                    {ABC.map((item) => 
-                    <li style={{
-                        fontFamily: `${fontName}, serif`,
-                        fontstyle: `${fontstyle}`,
-                        fontSize: "30px",
-                        lineHeight: '1.5'
-                    }} className="content_abc-item" key={item[0]}>
-                        <button className="content_abc-letter apply-font" onClick={onLetterClick} id={item[0]}>{item[0]}</button>
-                        <button className="content_abc-letter apply-font" onClick={onLetterClick} id={item[1]}>{item[1]}</button></li>)}
+                    {ABC.map(item => 
+                        <li style={{
+                            fontFamily: `${fontName}, serif`,
+                            fontstyle: `${fontstyle}`,
+                            fontSize: "30px",
+                            lineHeight: '1.5'
+                        }} className="content_abc-item" key={item[0]}>
+                            <button className="content_abc-letter apply-font" onClick={onLetterClick} id={item[0]}>{item[0]}</button>
+                            <button className="content_abc-letter apply-font" onClick={onLetterClick} id={item[1]}>{item[1]}</button>
+                        </li>
+                    )}
                 </ul>
                 </div>
                 <div className="content_rules">
