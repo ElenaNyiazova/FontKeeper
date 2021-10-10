@@ -1,5 +1,11 @@
 @import '../../constants/colors.scss';
 
+.not-found {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .not-found__bg-image {
     margin: 0;
     padding: 0;
@@ -11,7 +17,6 @@
 }
 
 .not-found__link {
-    margin-bottom: 120px;
     align-self: center;
 
     &:hover,

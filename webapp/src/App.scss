@@ -62,7 +62,15 @@ body, #root {
     }
 }
 
+.user-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .main-link {
+    padding: 0 1em;
     color: $white;
     font-size: 14px;
     line-height: 1.5;
@@ -184,7 +192,7 @@ body, #root {
 
 .sidebar {
     position: fixed;
-    top: 50px;
+    top: 55px;
     right: 30px;
     margin: 0;
     padding: 0;

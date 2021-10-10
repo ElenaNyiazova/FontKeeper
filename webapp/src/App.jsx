@@ -13,13 +13,13 @@ const App = () => {
     <div className="App">
       <Header/>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/FontKeeper'>
             <MainScreen />
           </Route>
-          <Route exact path='/profile'>
+          <Route exact path='/FontKeeper/profile'>
             <Profile />
           </Route>
-          <Route exact path='/admin'>
+          <Route exact path='/FontKeeper/admin'>
             <AdminScreen />
           </Route>
           <Route>
