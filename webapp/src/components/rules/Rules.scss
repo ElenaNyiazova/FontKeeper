@@ -1,0 +1,88 @@
+@import '../../constants/colors.scss';
+
+.content_rules-cards {
+    width: 70%;
+    max-width: 70%;
+    min-width: 500px;
+    min-height: 200px;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+}
+
+.content_rules-link {
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 0.2em 0;
+
+    &:hover,
+    &:focus {
+        opacity: 0.5;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.content_rules-cardlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.content_rules-cardItem {
+    padding: 20px;
+    border: 1px solid $text-light;
+    border-radius: 10px;
+    background-color: $white;
+
+    .content_rules-letters {
+        color: $accent-dark;
+        font-size: 6em;
+        font-size: 550%;
+        line-height: 1.2;
+    }
+
+    .content_rules-text-sm {
+        font-size: 14px;
+    }
+}
+
+.masonry-layout {
+    column-count: 2;
+    column-gap: 0;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 800px) {
+        column-count: 1;
+    }
+}
+
+.masonry-layout__panel {  
+  width: 85%;
+  margin: 20px;
+  margin-top: 0;
+  break-inside: avoid;
+}
+
+.content_rules-sourcetitle {
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.content_rules-sourcelink {
+    cursor: pointer;
+    font-size: 14px;
+    color: $accent-main;
+
+    &:hover,
+    &:focus {
+        color: $accent-hover;
+    }
+
+    &:active {
+        color: $accent-active;
+    }
+}

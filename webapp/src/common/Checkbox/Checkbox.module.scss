@@ -1,0 +1,90 @@
+@import '../../constants/colors.scss';
+
+
+.label {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-start;
+    color: $text-dark;
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 400;
+
+    &:hover, &:focus {
+        color: $accent-active;
+
+        .box {
+            &:before {
+                border-color: $accent-active;
+            }
+        }
+    }
+
+    .box {
+        padding-left: 24px;
+        position: relative;
+        transition: .3s;
+
+     
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 2px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $text-light;
+            transition: .3s;
+        }
+    }
+
+    .checkMark {
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            background-color: transparent;
+            border-radius: 2px;
+            transition: .3s;    
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 0;
+        }
+
+        &:after {
+            left: 4.3px;
+            top: 8px;
+            width: 1px;
+            height: 5px;
+            transform: rotate(-45deg);
+        }
+
+        &:before {
+            left: 9px;
+            top: 5px;
+            width: 1px;
+            height: 9px;
+            transform: rotate(45deg);
+        }
+    }    
+    
+    .input {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;    
+
+        &:checked {
+            &+.checkMark {
+                &:after, &:before {
+                    background-color: $accent-active;
+                }
+            }
+        }
+    }
+
+}

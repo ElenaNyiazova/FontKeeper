@@ -1,0 +1,41 @@
+@import '../../constants/colors.scss';
+
+.inputBlock {
+    position: relative;
+}
+
+.input {
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid $text-dark;
+    outline: none;
+    height: 40px;
+    padding: 8px 16px;
+    width: 100%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background: black;
+    }
+
+    &:focus {
+        border-color: $accent-active;
+
+        &+.label {
+            color: $accent-active;
+        }
+    }
+}
+
+
+.label {
+    position: absolute;
+    bottom: 100%;
+    left: 15px;       
+}
