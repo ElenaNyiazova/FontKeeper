@@ -4,10 +4,12 @@ import com.epamhack.fontkeeper.model.rest.LetterDTO;
 import com.epamhack.fontkeeper.model.rest.RuleDTO;
 import com.epamhack.fontkeeper.repositories.LetterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class LetterService {
     private LetterRepository letterRepository;
     private RuleService ruleService;
