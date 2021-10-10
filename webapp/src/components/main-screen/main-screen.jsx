@@ -4,24 +4,28 @@ import FontSelector from '../font-selector/font-selector';
 import Rules from '../rules/rules';
 
 const MainScreen = () => {
-    const [letter, setLetter] = useState('A');
-
+    const [letter, setLetter] = useState(null);
+    const [fontstyle, setFontStyle] = useState('bold');
+    const [activeFontFamily, setActiveFontFamily] = useState("Open Sans");
+    
     return (
         <main className='main-content'>
             <div className='main-content-top'>
-                <div className="container">
-                    <ContentView letter={letter} setLetter={setLetter} fontName="Roboto" />
-                </div>
+                <ContentView 
+                    letter={letter} 
+                    setLetter={setLetter} 
+                    fontstyle={fontstyle}
+                    setFontStyle={setFontStyle}
+                    fontName={activeFontFamily}
+                />
             </div>
 
             <div className="sidebar">
-                <FontSelector />
+                <FontSelector activeFontFamily={activeFontFamily} setActiveFontFamily={setActiveFontFamily} />
             </div>
             
             <div className='main-content-bottom'>
-                <div className="container">
-                    <Rules />
-                </div>
+                <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
             </div>
         </main>
     );

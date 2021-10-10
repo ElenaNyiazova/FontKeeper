@@ -6,7 +6,33 @@
     min-height: 200px;
     margin: 0;
     padding: 0;
-    padding: 20px 0 50px;
+    padding-left: 50px;
+}
+
+.content_rules-link {
+    display: block;
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 1em 0;
+    border: 0 none;
+    box-shadow: none;
+    background-color: transparent;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        opacity: 0.5;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.content_rules-cardlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .content_rules-cardItem {

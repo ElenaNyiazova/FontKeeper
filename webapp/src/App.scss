@@ -123,6 +123,13 @@ body, #root {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+}
+
+.content_abc-item {
+    margin: 0 5px;
+    padding: 0.2em;
+    font-size: 30px;
+    line-height: 1.5;
     column-gap: 20px;
 }
 
@@ -160,6 +167,12 @@ body, #root {
     padding: 0;
 }
 
+.content_rules-font-name {
+    font-size: 4rem;
+    color: $white;
+    margin-right: 10px;
+}
+
 .content_rules-select {
     cursor: pointer;
     color: $accent-main;
@@ -173,7 +186,7 @@ body, #root {
 .sidebar {
     position: fixed;
     top: 50px;
-    right: 35px;
+    right: 30px;
     margin: 0;
     padding: 0;
     border-radius: 10px;
@@ -181,7 +194,7 @@ body, #root {
 }
 
 .font-selector {
-    width: 400px;
+    width: 380px;
     margin: 0;
     padding: 20px;
     border-radius: 10px;

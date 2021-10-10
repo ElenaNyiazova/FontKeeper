@@ -3,11 +3,10 @@ import ExampleFontPicker from '../font-picker/font-picker';
 import {FotnTypes, FontAbcs, Sources, THROTTLE_TIMEOUT} from '../../constants/constants';
 import {throttle} from '../../utils';
 
-const FontSelector = () => {
+const FontSelector = props => {
+  const {activeFontFamily, setActiveFontFamily} = props;
   const [searchValue, setSearchValue] = useState(null);
   const [categories, setCategories] = useState([]);
-//   const [] = useState();
-//   const [] = useState();
 
   const updateCategories = (event) => {
     if (event.currentTarget.checked) {
@@ -58,7 +57,7 @@ const FontSelector = () => {
           </p>
           <p className="form-item">
               <input className="search-input" type="search" placeholder="Поиск по названию" onChange={searchFont} />
-              <ExampleFontPicker />
+              <ExampleFontPicker activeFontFamily={activeFontFamily} setActiveFontFamily={setActiveFontFamily} />
           </p>
           <p className="form-item">
             <button className="upload-btn" type="button" name="upload">Загрузить свой шрифт</button>
