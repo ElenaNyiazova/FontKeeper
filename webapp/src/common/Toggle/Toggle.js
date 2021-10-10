@@ -1,7 +1,7 @@
 import React from 'react'
-import classes from './Switch.module.scss'
+import classes from './Toggle.module.scss'
 
-const Switch = () => 
+const Toggle = () => 
     <div>
         <label className={classes.label}>
             <input className={classes.input} type="checkbox"/>
@@ -11,4 +11,4 @@ const Switch = () =>
         </label>
     </div>
 
-export default Switch
+export default Toggle

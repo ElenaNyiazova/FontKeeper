@@ -2,33 +2,11 @@
 
 .content_rules-cards {
     width: 70%;
-    max-width: 70%;
     min-width: 500px;
     min-height: 200px;
     margin: 0;
     padding: 0;
-    padding-left: 50px;
-}
-
-.content_rules-link {
-    margin-left: 20px;
-    font-size: 14px;
-    padding: 0.2em 0;
-
-    &:hover,
-    &:focus {
-        opacity: 0.5;
-    }
-
-    &:active {
-        opacity: 0.7;
-    }
-}
-
-.content_rules-cardlist {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    padding: 20px 0 50px;
 }
 
 .content_rules-cardItem {
@@ -51,8 +29,8 @@
 
 .masonry-layout {
     column-count: 2;
-    column-gap: 0;
-    margin-bottom: 20px;
+    column-gap: 30px;
+    margin-top: 20px;
 
     @media screen and (max-width: 800px) {
         column-count: 1;
@@ -60,9 +38,8 @@
 }
 
 .masonry-layout__panel {  
-  width: 85%;
-  margin: 20px;
   margin-top: 0;
+  margin-bottom: 30px;
   break-inside: avoid;
 }
 

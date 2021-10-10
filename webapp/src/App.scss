@@ -18,6 +18,7 @@ li {
 
 ul {
     padding: 0;
+    margin: 0;
 }
 
 a {
@@ -37,12 +38,9 @@ body, #root {
 }
 
 .container {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1380px;
+    padding: 0 20px;
 }
 
 .main-title {
@@ -78,19 +76,6 @@ body, #root {
     }
 }
 
-.main-header,
-.main-footer {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    background-color: $bg;
-}
-
 .main-content {
     position: relative;
     width: 100%;
@@ -111,6 +96,10 @@ body, #root {
     max-width: 100%;
 }
 
+.main-content-bottom {
+
+}
+
 .main-content-top {
     background-color: $bg;
 }
@@ -126,11 +115,6 @@ body, #root {
     margin-right: 20px;
 }
 
-.content_top {
-    margin: 0;
-    padding: 0 50px;
-}
-
 .content_abc-list {
     width: 100%;
     max-width: 100%;
@@ -139,11 +123,7 @@ body, #root {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-}
-
-.content_abc-item {
-    margin: 0 5px;
-    padding: 0.2em;
+    column-gap: 20px;
 }
 
 .content_abc-letter {
@@ -272,12 +252,6 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-
-.container {
-    max-width: 1340px;
-    margin: 0 auto;
 }
 
 .h3 {

@@ -29,12 +29,14 @@ const mockRules = [{
 const Rules = props => {
     return (
     <div className="content_rules-cards">
-        <Link className="content_rules-link" to="/">Вернуться к основным правилам</Link>
-        <ul className="content_rules-cardlist masonry-layout">
-            {mockRules.map((rule) => <li className="content_rules-cardItem masonry-layout__panel">
-                <h3 className="content_rules-letters">{rule.letters}</h3>
-                <p className="content_rules-text-sm">{rule.text}</p>
-            </li>)}
+        <Link className="link" to="/">Вернуться к основным правилам</Link>
+        <ul className="masonry-layout">
+            {mockRules.map((rule) => 
+                <li className="content_rules-cardItem masonry-layout__panel">
+                    <h3 className="content_rules-letters">{rule.letters}</h3>
+                    <p className="content_rules-text-sm">{rule.text}</p>
+                </li>
+            )}
             <li className="content_rules-cardItem masonry-layout__panel">
                 <h3 className="content_rules-sourcetitle">Roboto из библиотеки Google fonts</h3>
                 <p className="content_rules-text-sm">Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.

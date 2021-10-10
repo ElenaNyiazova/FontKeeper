@@ -2,28 +2,28 @@ import React, {useState} from 'react';
 import ContentView  from '../content-view/content-view';
 import FontSelector from '../font-selector/font-selector';
 import Rules from '../rules/rules';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 
 const MainScreen = () => {
-    const [letter, setLetter] = useState(null);
+    const [letter, setLetter] = useState('A');
 
     return (
-        <div className='container'>
-        <Header />
         <main className='main-content'>
             <div className='main-content-top'>
-                <ContentView letter={letter} setLetter={setLetter} fontName="Roboto" />
+                <div className="container">
+                    <ContentView letter={letter} setLetter={setLetter} fontName="Roboto" />
+                </div>
             </div>
+
             <div className="sidebar">
                 <FontSelector />
             </div>
+            
             <div className='main-content-bottom'>
-                <Rules />
+                <div className="container">
+                    <Rules />
+                </div>
             </div>
         </main>
-        <Footer />
-        </div>
     );
 };
 
