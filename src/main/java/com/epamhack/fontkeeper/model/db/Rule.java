@@ -26,9 +26,9 @@ public class Rule {
     @JoinColumn(name = "rule_category_id", nullable = false)
     private RuleCategory ruleCategory;
 
-    private boolean rank;
+    private int rank;
 
-    private int visible;
+    private boolean visible;
 
     @ManyToMany
     @JoinTable (name="letters_rules",

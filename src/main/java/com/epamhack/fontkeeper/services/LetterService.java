@@ -1,6 +1,8 @@
 package com.epamhack.fontkeeper.services;
 
+import com.epamhack.fontkeeper.exceptions.LetterNotFoundException;
 import com.epamhack.fontkeeper.model.db.Letter;
+import com.epamhack.fontkeeper.model.db.Rule;
 import com.epamhack.fontkeeper.model.rest.LetterDTO;
 import com.epamhack.fontkeeper.model.rest.RuleDTO;
 import com.epamhack.fontkeeper.repositories.LetterRepository;
@@ -13,32 +15,24 @@ import java.util.List;
 @Service
 public class LetterService {
     private LetterRepository letterRepository;
-    private RuleService ruleService;
 
     @Autowired
-    public LetterService(LetterRepository letterRepositiry, RuleService ruleService) {
+    public LetterService(LetterRepository letterRepositiry) {
         this.letterRepository = letterRepositiry;
-        this.ruleService = ruleService;
     }
 
     Letter findLetterById (long letterDtoId){
-        return letterRepository.findById(letterDtoId).orElse(new Letter());
+        return letterRepository.findById(letterDtoId).orElseThrow(LetterNotFoundException::new);
     }
 
-
-    //получаем  id буквы, возвращаем список ее правил
     List<RuleDTO> findRulesByLetter(long letterID) {
-        ArrayList<RuleDTO> listOfRules = new ArrayList<>();
-        //найти букву по id
+        List<RuleDTO> listRulesDTO = new ArrayList<>();
+        List<Rule> listRules =  findLetterById(letterID).getRules();
 
-
-        //Если буква не найдена new LetterNotFoundException()
-
-        //выбрать все правила для этой буквы
-
-        listOfRules.add(letter,
-        ruleService.
-        return listOfRules;
+        for(Rule rule: listRules){
+            listRulesDTO.add(new RuleDTO(rule));
+        }
+        return listRulesDTO;
     }
 
 }

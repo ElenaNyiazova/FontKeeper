@@ -14,14 +14,15 @@ public class RuleService {
     RuleRepository ruleRepository;
 
     @Autowired
-    public RuleService(RuleRepository ruleRepository) {
+    public RuleService(RuleRepository ruleRepository){
         this.ruleRepository = ruleRepository;
     }
-
-
-    List<LetterDTO> getAllLetterWithRule(RuleDTO ruleDTO){
-        Iterable<Rule> list = ruleRepository.findAllById(ruleDTO.getId());
-        allLettersWithRule.addAll(ruleService.findLetters(ruleDTO.id));
-        return allLettersWithRule;
-    }
 }
+
+
+//    List<LetterDTO> getAllLetterWithRule(RuleDTO ruleDTO){
+////        Iterable<Rule> allLettersWithRule = ruleRepository.findAllById(ruleDTO.getId());
+////        allLettersWithRule.addAll(ruleService.findLetters(ruleDTO.id));
+////        return allLettersWithRule;
+////    }
+//}
