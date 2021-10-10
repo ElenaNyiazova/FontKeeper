@@ -1,0 +1,317 @@
+@import './constants/colors.scss';
+@import './common/normalize.scss';
+@import './common/link.scss';
+@import './common/button.scss';
+
+* {
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
+
+    &:after, &:before {
+        box-sizing: border-box;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+body, #root {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $text-dark;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.main-title {
+    font-family: "PT sans", sans-serif;
+    color: $white;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.2em;
+
+    .main-title_bg {
+        color: $accent-light
+    }
+
+    .main-title_sm {
+        color: $accent-main;
+    }
+}
+
+.main-link {
+    color: $white;
+    font-size: 14px;
+    line-height: 1.5;
+
+    &:hover,
+    &:focus {
+        opacity: 0.5;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.main-header,
+.main-footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    background-color: $bg;
+}
+
+.main-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: $bg-light;
+}
+
+.main-content-top,
+.main-content-bottom {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-content-top {
+    background-color: $bg;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 70%;
+    min-width: 500px;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.content_top {
+    margin: 0;
+    padding: 0 50px;
+}
+
+.content_abc-list {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_abc-item {
+    margin: 0 5px;
+    padding: 0.2em;
+}
+
+.content_abc-letter {
+    color: $white;
+    font-size: 5rem;
+    line-height: 1.5;
+    border: 0 none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.content_abc-letter:hover,
+.content_abc-letter:focus {
+    color: $accent-light;
+}
+
+.content_abc-letter:active {
+    color: $accent-light;
+    opacity: 0.6;
+}
+
+.content_rules {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.content_rules-select {
+    cursor: pointer;
+    color: $accent-main;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    background: transparent;
+    outline: none;
+}
+
+.sidebar {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.font-selector {
+    width: 400px;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $white;
+
+    .form-item {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        label {
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                margin-right: 5px;
+            }
+        }
+
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .upload-btn {
+        width: 100%;
+        max-width: 100%;
+        border: 0 none;
+        box-shadow: none;
+        color: $white;
+        background-color: $accent-main;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-hover;
+        }
+
+        &:active {
+            background-color: $accent-active;
+        }
+    }
+
+    .upload-hint {
+        font-size: 14px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.h3 {
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.smallText {
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.h1 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.regular {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.bold {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
