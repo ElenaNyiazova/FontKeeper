@@ -28,8 +28,9 @@ const MainScreen = () => {
             </div>
             
             <div className='main-content-bottom'>
+                
             <div className="container">
-            <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
+                <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
             </div>
                 
             </div>

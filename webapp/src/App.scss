@@ -221,6 +221,10 @@ body, #root {
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);;
 }
 
+div[id^=font-picker] ul li button.active-font {
+    background: $accent-hover;
+}
+
 .font-selector {
     width: 380px;
     margin: 0;
@@ -228,36 +232,56 @@ body, #root {
     border-radius: 10px;
     background-color: $white;
 
-    .form-item {
+    .searchBar {
         width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
+        margin-top: 20px;
+    }
+
+    .formDivider {
+        margin: 20px 0;
+        border-color: $bg-light;
+    }
+
+    // .form-item {
+    //     width: 100%;
+    //     max-width: 100%;
+    //     margin: 0;
+    //     padding: 0;
+    //     display: flex;
+    //     flex-wrap: wrap;
+
+    //     label {
+    //         margin: 0;
+    //         padding: 10px;
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+
+    //         input {
+    //             margin-right: 5px;
+    //         }
+    //     }
+
+    // }
+
+    .formInput {
         display: flex;
         flex-wrap: wrap;
-
-        label {
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            input {
-                margin-right: 5px;
-            }
-        }
-
+        gap: 15px;
     }
 
-    .search-input {
+    .fontSearch {
         width: 100%;
-        max-width: 100%;
-        padding: 5px;
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
     }
+
+    // .search-input {
+    //     width: 100%;
+    //     max-width: 100%;
+    //     padding: 5px;
+    //     margin: 0;
+    //     margin-bottom: 10px;
+    //     font-size: 14px;
+    // }
 
     .upload-btn {
         width: 100%;

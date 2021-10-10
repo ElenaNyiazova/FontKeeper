@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ExampleFontPicker from '../font-picker/font-picker';
 import {FotnTypes, FontAbcs, Sources, THROTTLE_TIMEOUT} from '../../constants/constants';
 import {throttle} from '../../utils';
+import Checkbox from "../../common/Checkbox/Checkbox";
+import SearchBar from "../../common/SearchBar/SearchBar";
 
 const FontSelector = props => {
   const {activeFontFamily, setActiveFontFamily} = props;
@@ -28,38 +30,37 @@ const FontSelector = props => {
 	};
 
     return (
-        <div className="font-selector">
+      <div className="font-selector">
         <form action={searchValue} method="post">
-          <p className="form-item">
+          <p className="formInput">
             {FotnTypes.map((type) => 
-            <label key={type.categorie}>
-                <input type="checkbox" id={type.categorie} name={type.categorie} onChange={updateCategories} />
-                 {type.name}
-            </label>)}
+              <Checkbox id={type.categorie} name={type.categorie} onChange={updateCategories} key={type.categorie}>
+                {type.name}
+              </Checkbox>
+            )}
           </p>
-          <hr />
-          <p className="form-item">
+          <hr className="formDivider" />
+          <p className="formInput">
               {FontAbcs.map((abc) => 
-              <label key={abc.key}>
-                <input type="checkbox" id={abc.key} name={abc.key} />
+              <Checkbox id={abc.key} name={abc.key} key={abc.key}>
                 {abc.name}
-              </label>
+              </Checkbox>
             )}
           </p>
-          <hr />
-          <p className="form-item">
+          <hr className="formDivider" />
+          <p className="formInput">
           {Sources.map((source) => 
-              <label key={source.key}>
-                <input type="checkbox" id={source.key} name={source.key} />
-                {source.name}
-              </label>
-            )}
+            <Checkbox type="checkbox" id={source.key} name={source.key} key={source.key}>
+              {source.name}
+            </Checkbox>
+          )}
           </p>
-          <p className="form-item">
-              <input className="search-input" type="search" placeholder="Поиск по названию" onChange={searchFont} />
+          <p className="formInput">
+              <SearchBar className="fontSearch" placeholder="Поиск по названию" onChange={searchFont} />
+
               <ExampleFontPicker activeFontFamily={activeFontFamily} setActiveFontFamily={setActiveFontFamily} />
           </p>
-          <p className="form-item">
+          <p className="formInput">
             <button className="upload-btn" type="button" name="upload">Загрузить свой шрифт</button>
             <span className="upload-hint">Требуется регистрация</span>
           </p>

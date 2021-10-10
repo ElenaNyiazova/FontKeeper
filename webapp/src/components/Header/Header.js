@@ -18,7 +18,7 @@ const Header = () => {
           </h1>
         </Link>
         <p className="user-nav">
-          <Link className="main-link" to="/FontKeeper/admin">
+          <Link className="main-link" to="/FontKeeper/admin/rules">
             Администрирование
           </Link>
           <Link className="main-link" to="/FontKeeper/profile">

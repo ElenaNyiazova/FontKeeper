@@ -23,7 +23,7 @@ const App = () => {
           <Route exact path='/FontKeeper/profile'>
             <Profile />
           </Route>
-          <Route exact path='/FontKeeper/admin'>
+          <Route exact path='/FontKeeper/admin/rules'>
             <RulesScreen />
           </Route>
           <Route exact path='/FontKeeper/admin/library'>
