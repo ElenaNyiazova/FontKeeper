@@ -19,7 +19,7 @@ public class RuleService {
     @Autowired
     private LetterService letterService;
 
-//найти правило по id, создать правило+, достать лист letters
+//todo найти правило по id, достать лист letters
 
     public RuleDTO createRuleDTO(Rule rule){
         return RuleDTO.builder()
@@ -30,8 +30,4 @@ public class RuleService {
                 .visible(rule.isVisible())
                 .build();
     }
-
-//        List<LetterDTO> letterDTOList = rule.getLetters().stream()
-//                .map(letterService::createLetterDTO)
-//                .collect(Collectors.toList());
 }
