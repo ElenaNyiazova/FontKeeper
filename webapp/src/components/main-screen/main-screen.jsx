@@ -11,6 +11,7 @@ const MainScreen = () => {
     return (
         <main className='main-content'>
             <div className='main-content-top'>
+                <div className="container">
                 <ContentView 
                     letter={letter} 
                     setLetter={setLetter} 
@@ -18,6 +19,8 @@ const MainScreen = () => {
                     setFontStyle={setFontStyle}
                     fontName={activeFontFamily}
                 />
+                </div>
+                
             </div>
 
             <div className="sidebar">
@@ -25,7 +28,10 @@ const MainScreen = () => {
             </div>
             
             <div className='main-content-bottom'>
-                <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
+            <div className="container">
+            <Rules letter={letter} setLetter={setLetter} fontName={activeFontFamily} />
+            </div>
+                
             </div>
         </main>
     );
