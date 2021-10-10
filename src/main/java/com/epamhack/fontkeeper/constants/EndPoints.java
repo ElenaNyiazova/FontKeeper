@@ -38,6 +38,8 @@ public interface EndPoints {
 
     String API_FONTS = API_PREFIX + "/fonts";
 
+    String API_LETTERS_SEARCH_BY_ID = API_PREFIX + "/letter/{id}";
+
     /**
      * User management
      */
