@@ -11,28 +11,36 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class LetterService {
     private LetterRepository letterRepository;
+    private RuleService ruleService;
 
     @Autowired
-    public LetterService(LetterRepository letterRepositiry) {
-        this.letterRepository = letterRepositiry;
+    public LetterService(LetterRepository letterRepository, RuleService ruleService) {
+        this.letterRepository = letterRepository;
+        this.ruleService = ruleService;
     }
 
-    Letter findLetterById (long letterDtoId){
+    public Letter findLetterById (long letterDtoId){
         return letterRepository.findById(letterDtoId).orElseThrow(LetterNotFoundException::new);
     }
 
-    List<RuleDTO> findRulesByLetter(long letterID) {
+    public List<RuleDTO> getRulesByLetter(long letterID) {
         List<RuleDTO> listRulesDTO = new ArrayList<>();
         List<Rule> listRules =  findLetterById(letterID).getRules();
-
         for(Rule rule: listRules){
-            listRulesDTO.add(new RuleDTO(rule));
+            listRulesDTO.add(ruleService.createRuleDTO(rule));
         }
         return listRulesDTO;
     }
 
+    public LetterDTO createLetterDTO(Letter letter){
+        return LetterDTO.builder()
+                .letterName(letter.getName())
+                .alphabet(letter.getAlphabet())
+                .build();
+    }
 }

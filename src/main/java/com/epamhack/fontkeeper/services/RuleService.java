@@ -8,21 +8,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class RuleService {
-    RuleRepository ruleRepository;
+    private RuleRepository ruleRepository;
+    private LetterService letterService;
 
     @Autowired
-    public RuleService(RuleRepository ruleRepository){
+    public RuleService(RuleRepository ruleRepository, LetterService letterService) {
         this.ruleRepository = ruleRepository;
+        this.letterService = letterService;
     }
+
+//найти правило по id, создать правило+, достать лист letters
+
+    public RuleDTO createRuleDTO(Rule rule){
+        return RuleDTO.builder()
+                .ruleName(rule.getRuleName())
+                .ruleInfo(rule.getRuleInfo())
+                .ruleCategory(rule.getRuleCategory())
+                .rank(rule.getRank())
+                .visible(rule.isVisible())
+                .build();
+    }
+
+//        List<LetterDTO> letterDTOList = rule.getLetters().stream()
+//                .map(letterService::createLetterDTO)
+//                .collect(Collectors.toList());
 }
-
-
-//    List<LetterDTO> getAllLetterWithRule(RuleDTO ruleDTO){
-////        Iterable<Rule> allLettersWithRule = ruleRepository.findAllById(ruleDTO.getId());
-////        allLettersWithRule.addAll(ruleService.findLetters(ruleDTO.id));
-////        return allLettersWithRule;
-////    }
-//}

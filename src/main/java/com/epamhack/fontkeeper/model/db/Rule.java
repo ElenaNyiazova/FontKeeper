@@ -34,5 +34,5 @@ public class Rule {
     @JoinTable (name="letters_rules",
             joinColumns=@JoinColumn (name="rule_id", nullable = false),
             inverseJoinColumns=@JoinColumn(name="letter_id", nullable = false))
-    private List<Letter> letters;
+    private List<Letter> allLettersWithRule;
 }
