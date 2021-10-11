@@ -19,9 +19,7 @@ const UsersScreen = () => {
             <p className="active table-cell">Активен</p>
           </li>
           
-          {USERS_MOCK.map(user => {
-              return <Suggestion user={user} />
-          })}
+          {USERS_MOCK.map(user => <Suggestion key={user.name} user={user} />)}
         </ul>
       </div>
     </div>

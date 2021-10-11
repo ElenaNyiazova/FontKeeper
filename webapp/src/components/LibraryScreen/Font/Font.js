@@ -2,7 +2,7 @@ import React from 'react'
 import './Font.scss'
 
 const Font = props => {
-    const {fontName, license, source, user, type, lang} = props.font
+    const {fontName, license, source, type, lang} = props.font
 
     return <li className="adminTable-item">
         <p className="fontName table-cell">{fontName}</p>

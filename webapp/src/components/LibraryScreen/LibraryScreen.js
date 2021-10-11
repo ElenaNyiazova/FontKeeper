@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import AdminControls from "../../common/AdminControls/AdminControls";
 import { LIBRARY_MOCK } from "../../constants/constants";
 import Font from "./Font/Font";
@@ -6,6 +6,13 @@ import "./LibraryScreen.scss";
 
 
 const LibraryScreen = () => {
+  useEffect(() => {
+    fetch('https://calm-fortress-83458.herokuapp.com/api/v1/fonts')
+      .then(res => res.json())
+      .then(result => console.log(result))
+      .catch(err => console.log(err))
+  }, [])
+
   return (
     <div className="adminScreen">
       <div className="container">
@@ -21,9 +28,7 @@ const LibraryScreen = () => {
             <p className="actions table-cell">Действия</p>
           </li>
           
-          {LIBRARY_MOCK.map(font => {
-              return <Font font={font} />
-          })}
+          {LIBRARY_MOCK.map(font => <Font key={font.fontName} font={font} />)}
         </ul>
 
         <button className="button">Добавить шрифт</button>

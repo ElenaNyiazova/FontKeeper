@@ -3,7 +3,7 @@ import Toggle from "../../../common/Toggle/Toggle";
 import './Rule.scss'
 
 const Rule = props => {
-    const {mainLetters, extraLetters, rule, category, importance, visibility} = props.rule
+    const {handleDelete, mainLetters, extraLetters, rule, category, importance, visibility} = props.rule
 
     return <li className="adminTable-item">
         <p className="mainLetter table-cell">{mainLetters}</p>
@@ -11,10 +11,10 @@ const Rule = props => {
         <p className="rule table-cell">{rule}</p>
         <p className="category table-cell">{category}</p>
         <p className="importance table-cell">{importance}</p>
-        <p className="visibility table-cell"><Toggle checked={visibility} /></p>
+        <div className="visibility table-cell"><Toggle checked={visibility} /></div>
         <p className="actions table-cell">
             <button className="editBtn"></button>
-            <button className="deleteBtn"></button>
+            <button className="deleteBtn" onClick={handleDelete}></button>
         </p>
     </li>
 }

@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
+  const [auth, setAuth] = useState(false)
+
   return (
     <header className="header">
       <div className="container">
@@ -17,17 +19,24 @@ const Header = () => {
             <span className="main-title_sm">б</span>укве
           </h1>
         </Link>
-        <p className="user-nav">
-          <Link className="main-link" to="/FontKeeper/admin/rules">
-            Администрирование
-          </Link>
-          <Link className="main-link" to="/FontKeeper/profile">
-            Профиль
-          </Link>
-          <Link className="main-link" to="/">
-            Выход
-          </Link>
-        </p>
+        {auth ? 
+          <p className="user-nav">
+            <Link className="link" to="/FontKeeper/admin/rules">
+              Администрирование
+            </Link>
+            <Link className="link" to="/FontKeeper/profile">
+              Профиль
+            </Link>
+            <Link className="link" to="/" onClick={() => setAuth(!auth)}>
+              Выход
+            </Link>
+          </p>
+          : <p className="user-nav">
+              <Link className="link" to="/FontKeeper" onClick={() => setAuth(!auth)}>
+                Войти
+              </Link>
+            </p>  
+        }
       </div>
     </header>
   );

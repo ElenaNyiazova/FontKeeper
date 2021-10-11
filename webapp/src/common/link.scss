@@ -7,7 +7,7 @@
     background-color: transparent;
     border: none;
     box-shadow: none;
-    
+    cursor: pointer;
     
     &:after {
         content: '';
@@ -20,8 +20,9 @@
         left: 0;
     }
 
-    &:hover {
+    &:hover, &:focus {
         color: $accent-main;
+        outline: none;
 
         &:after {
             background-color: $accent-main;

@@ -22,9 +22,7 @@ const SuggestionsScreen = () => {
             <p className="actions table-cell semi-wide">Действия</p>
           </li>
           
-          {SUGGESTIONS_MOCK.map(suggestion => {
-              return <Suggestion suggestion={suggestion} />
-          })}
+          {SUGGESTIONS_MOCK.map(suggestion => <Suggestion key={suggestion.fontName} suggestion={suggestion} />)}
         </ul>
       </div>
     </div>

@@ -8,8 +8,8 @@ const MyFonts = () => {
       <h3 className="h3">Мои шрифты</h3>
 
       <ul className="fontsList">
-        {[1, 2, 3, 4].map((elem) => (
-          <li className="fontsList-item">
+        {[1, 2, 3, 4].map((elem, i) => (
+          <li key={i} className="fontsList-item">
             <p className="fontName">
               <Link className="fontName link" to="/">
                 Obituary

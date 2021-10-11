@@ -9,7 +9,7 @@ const User = (props) => {
         <p className="email table-cell wide">{email}</p>
         <p className="suggested table-cell wide">{suggested}</p>
         <p className="approved table-cell wide">{approved}</p>
-        <p className="active table-cell"><Toggle checked={active} /></p>
+        <div className="active table-cell"><Toggle checked={active} /></div>
     </li>
 }
 export default User

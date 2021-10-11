@@ -5,6 +5,10 @@ import AdminControls from "../../common/AdminControls/AdminControls";
 import { RULES_MOCK } from "../../constants/constants";
 
 const AdminScreen = () => {
+  const handleDelete = () => {
+    RULES_MOCK = RULES_MOCK.splice(1,1)
+  }
+
   return (
     <div className="adminScreen">
       <div className="container">
@@ -21,9 +25,7 @@ const AdminScreen = () => {
             <p className="actions table-cell">Действия</p>
           </li>
           
-          {RULES_MOCK.map(rule => {
-              return <Rule rule={rule} />
-          })}
+          {RULES_MOCK.map(rule => <Rule key={rule.extraLetters} handleDelete={handleDelete} rule={rule} />)}
         </ul>
 
         <button className="button">Добавить правило</button>

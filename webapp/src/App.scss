@@ -88,6 +88,24 @@ body, #root {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
+
+    .link {
+        color: $white;
+
+        &:after {
+            background-color: $white;
+            bottom: 0;
+        }
+
+        &:hover {
+            color: $accent-hover;
+
+            &:after {
+                background-color: $accent-hover;
+            }
+        }
+    }
 }
 
 .main-link {
@@ -146,23 +164,25 @@ body, #root {
 
 .content_abc-list {
     width: 100%;
-    max-width: 100%;
+    max-width: 883px;
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .content_abc-item {
-    margin: 0 5px;
-    padding: 0.2em;
     font-size: 30px;
     line-height: 1.5;
     column-gap: 20px;
+    display: flex;
+    gap: 10px;
 }
 
 .content_abc-letter {
+    padding: 0;
     color: $white;
     font-size: 5rem;
     line-height: 1.5;
@@ -214,7 +234,7 @@ body, #root {
 .sidebar {
     position: fixed;
     top: 80px;
-    right: 30px;
+    right: 100px;
     margin: 0;
     padding: 0;
     border-radius: 10px;
@@ -292,7 +312,6 @@ div[id^=font-picker] ul li button.active-font {
         background-color: $accent-main;
         text-align: center;
         padding: 20px;
-        margin-bottom: 10px;
         font-size: 14px;
         font-weight: bold;
 

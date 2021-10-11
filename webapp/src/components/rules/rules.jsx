@@ -25,9 +25,9 @@ const Rules = props => {
 
     return (
     <div className="content_rules-cards">
-        {letter ? (<button onClick={onBackClick} className="link">Вернуться к основным правилам</button>):(<Link className="link" to="/">Правила для каждой буквы</Link>)}
+        {letter ? (<button onClick={onBackClick} className="link">Вернуться к основным правилам</button>):(<Link className="link" to="/FontKeeper">Правила для каждой буквы</Link>)}
         <ul className="content_rules-cardlist masonry-layout">
-            {rulesToRender.map((rule) => <li className="content_rules-cardItem masonry-layout__panel">
+            {rulesToRender.map((rule, i) => <li key={i} className="content_rules-cardItem masonry-layout__panel">
                 <h3 className="content_rules-letters apply-font">{rule.letters}</h3>
                 <p className="content_rules-text-sm">{rule.text}</p>
             </li>)}

@@ -16,7 +16,7 @@ const PageNotFound = () => {
             height="400"
         />
       </div>
-      <Link className="not-found__link" to="/">
+      <Link className="not-found__link" to="/FontKeeper">
         Back home
       </Link>
     </div>
