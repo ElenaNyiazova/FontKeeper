@@ -43,6 +43,28 @@ body, #root {
     padding: 0 20px;
 }
 
+.editBtn, .deleteBtn, .seeBtn, .approveBtn {
+    border: none;
+    width: 24px;
+    height: 24px;
+}
+
+.editBtn {
+    background: url("./images/editBtn.png") no-repeat center;
+}
+
+.deleteBtn {
+    background: url("./images/deleteBtn.png") no-repeat center;
+}
+
+.seeBtn {
+    background: url("./images/eyeButton.png") no-repeat center;
+}
+
+.approveBtn {
+    background: url("./images/approveBtn.png") no-repeat center;
+}
+
 .main-title {
     font-family: "PT sans", sans-serif;
     color: $white;
@@ -50,7 +72,6 @@ body, #root {
     line-height: 1.5;
     font-weight: bold;
     margin: 0;
-    margin-left: 30px;
     padding: 0.2em 0;
 
     .main-title_bg {
@@ -192,12 +213,16 @@ body, #root {
 
 .sidebar {
     position: fixed;
-    top: 55px;
+    top: 80px;
     right: 30px;
     margin: 0;
     padding: 0;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);;
+}
+
+div[id^=font-picker] ul li button.active-font {
+    background: $accent-hover;
 }
 
 .font-selector {
@@ -207,36 +232,56 @@ body, #root {
     border-radius: 10px;
     background-color: $white;
 
-    .form-item {
+    .searchBar {
         width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
+        margin-top: 20px;
+    }
+
+    .formDivider {
+        margin: 20px 0;
+        border-color: $bg-light;
+    }
+
+    // .form-item {
+    //     width: 100%;
+    //     max-width: 100%;
+    //     margin: 0;
+    //     padding: 0;
+    //     display: flex;
+    //     flex-wrap: wrap;
+
+    //     label {
+    //         margin: 0;
+    //         padding: 10px;
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+
+    //         input {
+    //             margin-right: 5px;
+    //         }
+    //     }
+
+    // }
+
+    .formInput {
         display: flex;
         flex-wrap: wrap;
-
-        label {
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            input {
-                margin-right: 5px;
-            }
-        }
-
+        gap: 15px;
     }
 
-    .search-input {
+    .fontSearch {
         width: 100%;
-        max-width: 100%;
-        padding: 5px;
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
     }
+
+    // .search-input {
+    //     width: 100%;
+    //     max-width: 100%;
+    //     padding: 5px;
+    //     margin: 0;
+    //     margin-bottom: 10px;
+    //     font-size: 14px;
+    // }
 
     .upload-btn {
         width: 100%;
@@ -318,3 +363,145 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-direction: column;
 }
+
+// admin screens
+
+.adminScreen {
+    padding: 50px 0 20px;
+    flex: 1;
+    background-color: $bg-light;
+    position: relative;
+
+    .adminControls {
+        display: flex;
+        gap: 30px;
+    }
+
+    input {
+        width: 430px;
+    }
+
+    &Nav {
+        flex: 1;
+
+        ul {
+            display: flex;
+            justify-content: space-between;    
+        }
+    }
+
+    .adminNavItem {    
+        a {
+            &.active {
+                color: $accent-letter;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $accent-letter;
+                    left: 0;
+                    top: 120%;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            position: relative;
+            transition: .3s;
+
+            &:hover, &:focus {
+                outline: none;
+                color: $accent-main;
+            }
+        }
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.adminTable {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-item {
+        padding: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $white;
+        border-radius: 10px;
+        min-height: 44px;
+    
+        .table-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10%;
+            text-align: center;
+            padding: 0 10px;
+
+            &.wide {
+                width: auto;
+                flex: 1;
+            }
+        }
+    
+        .rule {
+            flex: 1;
+            text-align: left;
+        }
+    
+        .mainLetter, .extraLetter {
+            width: 12%;
+        }
+    
+        &.table-header {
+            background-color: transparent;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+    
+        .actions {
+            display: flex;
+            gap: 10px;
+
+            &.semi-wide {
+                width: 11%;
+            }
+        }
+
+        .source {
+            flex: 1;
+            word-break: break-all;
+        }
+
+        .fontName {
+            width: 15%;
+        }
+
+        .license {
+            width: 13%;
+        }
+
+        .user {
+            width: 15%;
+        }
+
+        .link {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+// end admin screens
